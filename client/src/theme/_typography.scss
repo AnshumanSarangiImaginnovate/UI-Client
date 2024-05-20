@@ -1,0 +1,18 @@
+body {
+  font-family: Arial, sans-serif;
+  color: get-color(900);
+  background-color: get-color(50);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: get-color(800);
+}
+
+p {
+  margin-bottom: 1.5rem;
+}

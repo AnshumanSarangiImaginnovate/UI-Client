@@ -1,0 +1,35 @@
+$base-color: #73be33; // Base color
+
+@function shade-color($color, $percentage) {
+  @return mix(white, $color, $percentage * 1%);
+}
+
+$base-50: shade-color($base-color, 95);
+$base-100: shade-color($base-color, 90);
+$base-200: shade-color($base-color, 80);
+$base-300: shade-color($base-color, 70);
+$base-400: shade-color($base-color, 60);
+$base-500: shade-color($base-color, 50); // Base color
+$base-600: shade-color($base-color, 40);
+$base-700: shade-color($base-color, 30);
+$base-800: shade-color($base-color, 20);
+$base-900: shade-color($base-color, 10);
+$base-950: shade-color($base-color, 5);
+
+$base-colors: (
+  50: $base-50,
+  100: $base-100,
+  200: $base-200,
+  300: $base-300,
+  400: $base-400,
+  500: $base-500,
+  600: $base-600,
+  700: $base-700,
+  800: $base-800,
+  900: $base-900,
+  950: $base-950,
+);
+
+@function base-color($shade) {
+  @return map-get($base-colors, $shade);
+}
