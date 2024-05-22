@@ -1,0 +1,59 @@
+*{
+    padding:0;
+    margin:0;
+}
+.domcard{
+    // font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    .containner{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+        padding: 20px;
+        gap: 2rem;
+        justify-content: space-around;
+    
+        .card{
+            border: 2px solid red;
+            background-color: #C4D0FF;
+            padding: 20px;
+            border: 2px solid #ebebf3;
+            border-radius: 15px;
+            justify-content: space-between;
+            
+            .certificate-button{
+                margin: 70px 10px 10px 0;
+            }
+            &:hover{
+                background-color: #b5c1f1;
+            }
+        }
+        .card3{
+            background-color: #6b7ab3;
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+
+            p{
+                font-size: 13px;
+                
+            }
+            button{
+                color: white;
+                margin: 70px 10px 10px 0;
+                padding: 8px;
+                border: none;
+                outline: 1px solid rgb(255, 255, 255);
+                border-radius: 7px;
+                background-color: inherit;
+                
+                &:hover{
+                    background-color: white;
+                    color: black;
+                }
+            }
+            &:hover{
+                background-color: #4f5c8d;
+            }
+        }
+    }
+}
