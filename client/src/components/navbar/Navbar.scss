@@ -1,0 +1,115 @@
+// USING-GRID-------------------------------------------
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container-nav {
+    width: 100%;
+  }
+  
+  .navbar {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fir, minmax(360px, 1fr));
+    align-items: center;
+    background-color: #6b7ab3;
+    color: white;
+    padding: 10px;
+    gap: 10px;
+  
+    .logo {
+      padding: 0 10px;
+    }
+  
+    .menu {
+      justify-self: center;
+  
+      ul {
+        display: grid;
+        grid-auto-flow: column;
+        gap: 10px;
+  
+        li {
+          list-style: none;
+  
+          a {
+            text-decoration: none;
+            padding: 10px;
+            color: inherit;
+  
+            &:hover {
+              color: #2c375f;
+            }
+          }
+        }
+      }
+    }
+  
+    .login-menu {
+      display: grid;
+      grid-auto-flow: column;
+      gap: 10px;
+      justify-self: end;
+    }
+  }
+  
+
+// USING-FLEX------------------------------------------------------
+
+// * {
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+//   }
+  
+//   .container-nav {
+//     width: 100%;
+//   }
+  
+//   .navbar {
+//     // border: 1px solid black;
+//     display: flex;
+//     flex-wrap: wrap;
+//     align-items: center;
+//     background-color: #6b7ab3;
+//     color: white;
+//     padding: 10px;
+  
+//     .logo {
+//       padding: 0 10px;
+//       margin-right: auto;
+//     }
+//     .login-menu {
+//         display: flex;
+//         flex-wrap: wrap;
+//         gap: 10px;
+//         margin-top: 10px;
+//       }
+  
+//     .menu {
+//       flex-grow: 1;
+  
+//       ul {
+//         display: flex;
+//         flex-wrap: wrap;
+//         justify-content: left;
+//         align-items: center;
+  
+//         li {
+//           list-style: none;
+  
+//           a {
+//             text-decoration: none;
+//             padding: 10px;
+//             color: inherit;
+  
+//             &:hover {
+//               color: #2c375f;
+//               text-decoration: underline #2c375f;
+//             }
+//           }
+//         }
+//       }
+//     }
