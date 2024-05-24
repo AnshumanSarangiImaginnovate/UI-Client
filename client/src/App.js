@@ -1,6 +1,9 @@
 import React from "react";
 import Navbar from "./components/navbar/Navbar";
 import DomainCards from "./components/domain-cards/DomainCards";
+// import Newnavbar from "./components/newnavbar/Newnavbar";
+import HeaderSection from "./components/headersection/HeaderSection";
+import Footers from "./components/footer/Footers";
 
 const cardarr = [
   {
@@ -24,8 +27,10 @@ const cardarr = [
 ];
 function App() {
   return (
-    <div>
-      {/* <Navbar /> */}
+    <div className="Mainbody">
+      <Navbar />
+      {/* <Newnavbar /> */}
+      <HeaderSection />
       <div className="domcard">
         <div className="containner">
           {cardarr.map((card) => (
@@ -38,6 +43,7 @@ function App() {
           ))}
         </div>
       </div>
+      {/* <Footers /> */}
     </div>
   );
 }

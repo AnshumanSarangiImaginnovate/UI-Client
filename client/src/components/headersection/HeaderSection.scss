@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.header-section {
+    position: relative;
+    height: 400px;
+  
+    .background-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; 
+      z-index: -1; 
+      // border-image: fill 1 linear-gradient(rgba(19, 42, 156, 0.5), rgba(125, 22, 8, 0.5));
+    }
+    .image-mask {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+  
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+  
+      &:before {
+        background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(82, 42, 42, 0.5)); // Primary color 
+      }
+
+  
+      &:after {
+        background: linear-gradient(rgba(136, 160, 175, 0.5), rgba(0, 0, 255, 0.2)); // Secondary color 
+        mix-blend-mode: multiply;
+      }
+    }
+  
+    .welcome-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      text-align: center;
+  
+      h1 {
+        font-size: 2.5rem; 
+        margin: 0;
+      }
+  
+      p {
+        font-size: 1.2rem;
+        margin: 10px 0 0;
+      }
+    }
+  }
+  
+//   &:before {
+//     background: linear-gradient(rgba(255, 0, 0, 0.2), rgba(255, 0, 0, 0.2)); // Primary color 
+//   }
+
+//   &:after {
+//     background: linear-gradient(rgba(0, 0, 255, 0.2), rgba(0, 0, 255, 0.2)); // Secondary color 
+//     mix-blend-mode: multiply;
+//   }
