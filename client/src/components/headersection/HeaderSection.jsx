@@ -1,6 +1,6 @@
 import React from "react";
 import "./HeaderSection.scss";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 const heading = "Welcome to Our Website";
 const para = "Your journey begins here";
@@ -23,11 +23,22 @@ function HeaderSection() {
     // </header>
     <Box
       sx={{
-        backgroundImage: `url(${backgroundImage})`,
         height: "100vh",
         width: "100vw",
+        backgroundImage: `url(${backgroundImage})`,
+        borderImage: `linear-gradient(135deg, rgba(25, 117, 210, 0.5) 10%, rgba(255, 156, 75, 0.5) 50%) 1 fill`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
       }}
-    ></Box>
+    >
+      <Typography variant="h1" sx={{ color: "black" }}>
+        Project Selection
+      </Typography>
+    </Box>
   );
 }
 
