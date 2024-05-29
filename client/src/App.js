@@ -1,9 +1,13 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/navbar/Navbar";
 import DomainCards from "./components/domain-cards/DomainCards";
 // import Newnavbar from "./components/newnavbar/Newnavbar";
 import HeaderSection from "./components/headersection/HeaderSection";
 import Footers from "./components/footer/Footers";
+
+import ProblemsListPage from "./pages/ProblemsListPage";
 
 const cardarr = [
   {
@@ -27,24 +31,32 @@ const cardarr = [
 ];
 function App() {
   return (
-    <div className="Mainbody">
-      <Navbar />
-      {/* <Newnavbar /> */}
-      <HeaderSection />
-      <div className="domcard">
-        <div className="containner">
-          {cardarr.map((card) => (
-            <DomainCards
-              cardname={card.cardname}
-              title={card.title}
-              text={card.text}
-              certificatebutton={card.certificatebutton}
-            />
-          ))}
-        </div>
-      </div>
-      {/* <Footers /> */}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Navbar />} />
+        <Route path="/hero" element={<HeaderSection />} />
+        <Route path="/problems" element={<ProblemsListPage />} />
+        {/* <Route>404 Not Found!</Route> */}
+      </Routes>
+    </Router>
+    // <div className="Mainbody">
+    //   <Navbar />
+    //   {/* <Newnavbar /> */}
+    //   <HeaderSection />
+    //   <div className="domcard">
+    //     <div className="containner">
+    //       {cardarr.map((card) => (
+    //         <DomainCards
+    //           cardname={card.cardname}
+    //           title={card.title}
+    //           text={card.text}
+    //           certificatebutton={card.certificatebutton}
+    //         />
+    //       ))}
+    //     </div>
+    //   </div>
+    //   {/* <Footers /> */}
+    // </div>
   );
 }
 
